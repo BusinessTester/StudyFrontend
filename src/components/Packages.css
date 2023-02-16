@@ -1,0 +1,39 @@
+.card-one .card-header{
+    background-color: blue;
+}
+.card-one .card-body{
+    /* background-color: rgba(17, 219, 17, 0.329); */
+    background-color: #FF6F61;
+}
+.card-one:hover{
+    background-color: rgba(241, 10, 21, 0.329);
+    transform: scale(1.15);
+    transition: 1.02s;
+}
+
+.card-two .card-header{
+    background-color:  #DD4124;
+}
+.card-two .card-body{
+    background-color: #009B77;
+}
+.card-two:hover{
+    background-color: rgba(241, 10, 21, 0.329);
+    transform: scale(1.15);
+    transition: 1.02s;
+}
+.card-three .card-header{
+    background-color:  #5B5EA6;
+}
+.card-three .card-body{
+    background-color: #E15D44;
+}
+.card-three:hover{
+    background-color: rgba(241, 10, 21, 0.329);
+    transform: scale(1.15);
+    transition: 1.02s;
+}
+
+.package-one{
+    border: 3px solid rgb(232, 236, 1);
+}

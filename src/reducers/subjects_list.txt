@@ -1,0 +1,16 @@
+  id:4,
+subject:'Mangalam',
+field:'Computer Engineering',
+year:'',
+university:'TU',
+college:'NA',
+level:'Bachelors',
+uploader:'StudyMaterials',
+price:100,
+
+
+
+
+
+preview:"https://www.youtube.com",
+contact:'9849632777 | studyMaterials@gmail.com'

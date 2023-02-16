@@ -1,0 +1,6 @@
+.footer-one{
+    border: 3px solid black;
+    /* position: fixed; */
+    margin-top: 30px;
+    bottom: 0%; 
+}

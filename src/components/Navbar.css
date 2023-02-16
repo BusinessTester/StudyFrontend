@@ -1,0 +1,88 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar{
+    border: 3px solid black;
+}
+
+.navbar-title{
+    color: azure;
+    /* width: 40px; */
+    font-size: 23px;
+
+
+}
+
+.navbar-badge-length{
+    color: azure;
+    /* width: 40px; */
+    font-size: 12px;
+}
+
+.navbar-mynotes{
+    color: azure;
+    /* width: 40px; */
+    font-size: 18px;
+}
+
+.navbar-icon-person{
+    color: azure;
+    /* width: 40px; */
+    font-size: 20px;
+    /* margin-top: 4px; */
+}
+
+.navbar-text-name{
+    color: azure;
+    /* width: 40px; */
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-right: 3px;
+
+}
+
+.navbar-logout{
+    color: azure;
+    /* width: 40px; */
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+
+}
+
+.navbar-icon-cash{
+    color: azure;
+    /* width: 40px; */
+    font-size: 25px;
+    margin-right: 3px;
+    margin-top: 3px;
+
+    /* margin: 3px; */
+}
+
+
+.navbar-icon-cart{
+    color: azure;
+    /* width: 40px; */
+    font-size: 25px;
+    margin-right: 6px;
+    margin-top: 3px;
+
+
+    /* margin: 3px; */
+}
+
+.navbar-icon-badge{
+    font-size: 12px;
+
+}
+
+.navbar-info{
+    color: azure;
+
+    font-size: 20px;
+    margin-top: 4px;
+
+
+}

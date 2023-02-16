@@ -1,0 +1,63 @@
+.afterpayment{
+    background-color: rgb(24, 209, 101);
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../images/god.PNG');
+    background-image: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    text-decoration:double;
+    text-decoration: solid underline;
+}
+.afterpayment-box{
+    background-color: rgba(250, 250, 250, 0.733);
+    
+    height: 400px;
+
+    width: 720px; 
+    margin-top: 40px;
+    margin-left: 390px;
+
+    border: 10px double black;
+    font-weight: bolder;
+    /* background-image: url('../images/Congratulations.PNG');
+     */
+     background-image: url('../images/white1.PNG');
+     /* background-image: center; */
+     background-size: cover;
+     /* opacity: 0.4; */
+color: black;
+
+    
+
+}
+
+.afterpayment-h6-text{
+    margin-top: 20px;
+    margin-left: 10px;
+    opacity: 1;
+} 
+.afterpayment-icon1-text{
+     margin-left: 20px;
+     
+     opacity: 1;
+
+}
+
+
+
+.afterpayment-icon1{
+    height: 20px;
+    font-weight: bolder;
+    font-size: 60px;
+    margin-left: 230px;
+    margin-left: 42%;
+
+}
+
+.afterpayment-btn1{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-left: 35%;
+}

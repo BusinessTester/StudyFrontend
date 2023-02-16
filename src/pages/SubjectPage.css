@@ -1,0 +1,30 @@
+.cardo{
+    background-color: #800080b0;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid whitesmoke;
+
+
+}
+
+.cardo .card{
+    background-color: #282D3C;
+}
+
+.cardo .card:hover{
+    background-color:#ffa31a ;
+    transform: scale(1.1);
+    transition: 1.2s;
+    
+}
+h6{
+    font-family: 'Courier New', Courier, monospace;
+    /* color: rgb(15, 15, 15); */
+
+}
+
+
+.btn:hover{
+    /* background-color: green; */
+    background-color: #282D3C;
+}

@@ -1,0 +1,9 @@
+.first{
+    /* background-color: #98B4D4; */
+    background-color: #f39167;
+    height: 100px;
+}
+.advertisement-one{
+    /* border-color: 4px dotted black; */
+    border: 3px solid rgb(10, 10, 10);
+}
