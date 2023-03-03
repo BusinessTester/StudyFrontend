@@ -20,6 +20,11 @@ import AfterPayment from './pages/AfterPayment'
 import SubjectsEditor from './pages/SubjectsEditor'
 import MainPageLoader from './pages/MainPageLoader'
 import SignupSuccess from './pages/SignupSuccess'
+import AllUsers from './pages/AllUsers'
+import ResendConfirm from './pages/ResendConfirm'
+import UserInfo from './pages/UserInfo'
+import UpdateSubject from './pages/UpdateSubject'
+
 
 const Path = () => {
   return (
@@ -43,9 +48,21 @@ const Path = () => {
             <Route path='/purchases/payment'element={<PaymentConfirmation/>}/>
             <Route path='/purchases/afterpayment'element={<AfterPayment/>}/>
             <Route path='/admin/subjectseditor' element={<SubjectsEditor/>}/>
-            <Route path='/mainpageloader' element={<MainPageLoader/>}/>
+            
             <Route path='/signup-success' element={<SignupSuccess/>}/>
+            <Route path='/admin/allusers' element={<AllUsers/>}/>
 
+
+{/* 3 new paths are added  */}
+
+<Route path='/admin/userinfo/:id' element={<UserInfo/>}/>
+            <Route path='/admin/updatesubject/:id' element={<UpdateSubject/>}/>
+
+            <Route path='/resendconfirmation'element={<ResendConfirm/>}/>
+{/* 3 new paths are added */}
+
+
+<Route path='/mainpageloader' element={<MainPageLoader/>}/>
 
 
             <Route path='/tester2'element={<Tester2/>}/>

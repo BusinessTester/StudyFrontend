@@ -25,7 +25,7 @@ const MyNotes = () => {
         }
     })
   },[])
-  console.log(procure)
+  // console.log(procure)
   
     return (
       <>
@@ -49,7 +49,7 @@ const MyNotes = () => {
           </td>
           <td className='fw-bold text-dark'>{element.subject_code}</td>
           <td>
-            <button className='btn btn-secondary fw-bold text-dark'><a href={element.subject_link} className='text-white' target='_blank'>Click here</a></button>
+            <button className='btn btn-secondary fw-bold text-dark'><a href={element.subject_link} className='text-white' target='_blank' rel="noreferrer">Click here</a></button>
           </td>
 
         </tr>

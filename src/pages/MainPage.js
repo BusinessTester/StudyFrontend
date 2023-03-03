@@ -14,7 +14,7 @@ import { listSubject, releaseStorage } from '../API/subjectAPI'
 const MainPage = () => {
     // const [info,setInfo] = useState(null)
   const user_presence = isAuthenticated()
-
+const [valuator,setValuator] = useState("")
   const subject_list = releaseStorage()
     //the following states are getting disabled since they are to be further refined before applying again  
 
@@ -22,7 +22,7 @@ const MainPage = () => {
      const [searchSubjects,setSearchSubjects] = useState('')
      const [arrange,setArrange]  = useState([])
     //  const [store1,setStore1]  = useState([])
-  
+    const [limit,setLimit] = useState(12)
     const dispatch = useDispatch()
   
     const store = useSelector(state=>state.SubjectRed)
@@ -51,7 +51,7 @@ return   setArrange(subject_list.filter(element=>element.subject.toLowerCase().m
 
     }
  
-    ,[])
+    ,[searchSubjects])
   
   
 const submitHandler = (event)=>{
@@ -66,8 +66,19 @@ const submitHandler = (event)=>{
   
      }
 
-    
+    const submitComputer=(event)=>{
+      event.preventDefault()
+      setArrange(subject_list.filter(element=>element.field.toLowerCase().match("computer")))
 
+    }
+
+    const submitEngineering = (event)=>{
+      event.preventDefault()
+
+// console.log(valuator)
+      setArrange(subject_list.filter(element=>element.field.toLowerCase().match("engineering")))
+
+    }
 
 // this function is disabled at the moment      
     //  const reloading = ()=>{
@@ -84,8 +95,7 @@ const submitHandler = (event)=>{
 <Navbar/>
 
 <div className='row'>
-<div className='col col-md-3'><h5 className='text mt-1 text-dark fw-bold ms-2'>Contact Us: 9849632777</h5> 
-<h5 className='text-dark fw-bold ms-2'>Email: 123@gmail.com</h5>
+<div className='col col-md-2'>
 </div>
 <div className='col col-md-6'>
    <form className="d-flex" role="search">
@@ -95,9 +105,32 @@ const submitHandler = (event)=>{
   </form>
   {/* <button className='btn btn-secondary'>Cart Items</button> */}
 </div>
-<div className='col col-md-3'>
+<div className='col col-md-4 mt-3' >
   {/* <button className='btn btn-success mt-3' onClick={()=>reloading}>reload all subjects</button> */}
+  <h5 className='text mt-1 text-dark fw-bold ms-1'><i class="bi bi-telephone-fill  bg-warning"> 9820135187</i></h5> 
+<h5 className='text-dark fw-bold ms-1'><i class="bi bi-envelope-check-fill bg-warning text-lg text-dark"> StudyMaterialsNepal@gmail.com</i></h5>
 </div>
+<span>
+<button className='btn btn-success me-3'>Subjects Wise:</button>
+ 
+
+  {/* <h6>Filters</h6> */}
+ <button onClick={submitHandler} className="btn btn-primary ms-2">All Subjects</button>   
+
+
+</span>
+<span><button className='btn btn-success me-3'>Fields Wise:</button><button className="btn btn-primary"  onClick={submitEngineering}>Engineering</button><button onClick={submitComputer} className="btn btn-primary m-1">Computer</button>
+   
+
+
+
+</span>
+<span><button className='btn btn-success me-3 mt-2'>University Wise:</button>
+<button className="btn btn-primary ms-2">TU</button> <button className="btn btn-primary">PU</button>
+
+
+</span>
+
 </div>
 
 
@@ -112,7 +145,7 @@ const submitHandler = (event)=>{
 // {
  
 // store1.length>0&&
-arrange.map((element,i)=>{
+arrange.slice(0,limit).map((element,i)=>{
         return <SubjectPage props={element} key={i}/>
     })
     // }
@@ -123,11 +156,24 @@ arrange.map((element,i)=>{
 
 }
 
-<h5 className='text text-dark my-auto bg-info'>More Subjects are Coming Soon
+{/* <h5 className='text text-dark my-auto bg-info'>More Subjects are Coming Soon
 
 
 
-</h5>   
+</h5>    */}
+<div className=' mainpage-contact-text fw-bold'>
+<h4 className='text text-white mt-5 fw-bold'>More Materials are coming soon</h4>
+<h4 className='text text-white mt-5 fw-bold'>Contact Us at: 9820135187</h4>
+<h4 className='text text-white mt-5 fw-bold'>Or</h4>
+<h4 className='text text-white mt-5 fw-bold'>Email Us at: StudyMaterialsNepal@gmail.com </h4>
+
+
+
+
+
+</div>
+
+{limit<arrange.length?<button onClick={()=>{setLimit(limit+3)}} className="btnshow btn btn-success">Show More</button>:<h4 className='text text-white mt-5'>All Items have been Loaded</h4>}
 
 </div> 
 

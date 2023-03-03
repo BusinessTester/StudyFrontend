@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { reseterpassword } from '../API/userAPI'
 import image1 from '../images/image_signin.PNG'
 import './ResetPassword.css'
@@ -16,26 +16,35 @@ const ResetPassword = () => {
   
   const param = useParams()
  const token = param.token
- console.log(param)
-
+//  console.log(param)
+const navigate = useNavigate()
 
   const submitHandler = (event)=>{
     event.preventDefault()
-    reseterpassword(token,password)
+    // let inputLength = document.getElementById("floatingInput").value
+    if(password.length<6||password===""){
+    //  return setError("Enter a valid password of length more than 6 characters")
+    return alert("Enter a valid password of length more than 6 characters")
+    }
+    else{
+       reseterpassword(token,password)
     .then(data=>{
         if(data.error){
             setError(data.error)
             setSuccess("")
-            console.log(data.error)
+            // console.log(data.error)
         }
         else{
             setSuccess(data.message)
             setError("")
-            console.log(data.message)
+            // console.log(data.message)
+            
 
         }
     })
     .catch(error=>console.log(error))
+    }
+   
   
    
 
@@ -44,8 +53,9 @@ const ResetPassword = () => {
 
   const showSuccess=()=>{
     if(success){
-      return <div className='alert alert-success w-25'>{success}</div>
-      
+       <div className='alert alert-success w-25'>{success}</div>
+         return navigate("/signin")
+            
     }
   }
 

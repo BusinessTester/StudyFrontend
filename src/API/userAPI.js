@@ -38,7 +38,8 @@ export const signInUser = (email,password)=>{
         method:"POST",
         headers:{
             Accept:"application/json",
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            Header:("Access-Control-Allow-Origin", "https://maerials-application.onrender.com")
         },
         body:JSON.stringify({email,password})
 
@@ -81,6 +82,8 @@ export const logOut = ()=>{
 // this is for the forgotten password 
 export const forgotPassword = (email)=>{
     return fetch(`https://maerials-application.onrender.com/api/forgotpassword`,{
+    // return fetch(`http://localhost:5000/api/forgotpassword`,{
+
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -96,6 +99,8 @@ export const forgotPassword = (email)=>{
 // this is for checking if the token received after the email has been received properly
 export const reseterpassword = (token,password)=>{
     return fetch(`https://maerials-application.onrender.com/api/resetpassword/${token}`,{
+    // return fetch(`http://localhost:5000/api/resetpassword/${token}`,{
+
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -116,7 +121,8 @@ export const myPurchases = (id)=>{
     return fetch(`https://maerials-application.onrender.com/api/showpurchases/${id}`,{
         method:"GET",
         headers:{
-            "Content-Type":"application/json"   
+            "Content-Type":"application/json",
+            Header:("Access-Control-Allow-Origin", "https://maerials-application.onrender.com")
 
         }
     })
@@ -202,4 +208,69 @@ export const sendDetails =(id,value)=>{
 .then(res=>res.json())
 .catch(err=>console.log(err))
 
+}
+
+
+
+export const resendingConfirmation =(email,password)=>{
+    return fetch(`https://maerials-application.onrender.com/api/resendconfirmation`,{
+        method:"POST",
+        headers:{
+            Accept:"application/json",
+            "Content-Type":"application/json",
+            Header:("Access-Control-Allow-Origin", "http://localhost:5000")
+        },
+
+        
+        body:JSON.stringify({email,password})
+
+    })
+.then(res=>res.json())
+.catch(err=>console.log(err))
+
+}
+
+export const totalUsers = ()=>{
+    return fetch(`https://maerials-application.onrender.com/api/listusers`,{
+        method:"GET",
+        headers:{
+            "Content-Type":"application/json"   
+
+        }
+    })
+    .then(res=>res.json())
+    .catch(error=>console.log(error))
+}
+
+
+export const addingPurchases = (id,subject,subject_code,subject_link)=>{
+    
+    return fetch(`https://maerials-application.onrender.com/api/addpurchases/${id}`,{
+        method:"POST",
+        headers:{
+            Accept:"application/json",
+            "Content-Type":"application/json",
+            Header:("Access-Control-Allow-Origin", "http://localhost:5000")
+        },
+
+        
+        body:JSON.stringify({subject,subject_code,subject_link})
+
+    })
+.then(res=>res.json())
+.catch(err=>console.log(err))
+
+
+}
+
+export const UserProfile = (id)=>{
+    return fetch(`https://maerials-application.onrender.com/api/listspecificuser/${id}`,{
+        method:"GET",
+        headers:{
+            "Content-Type":"application/json"   
+
+        }
+    })
+    .then(res=>res.json())
+    .catch(error=>console.log(error))
 }

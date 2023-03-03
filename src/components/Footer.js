@@ -17,9 +17,9 @@ const Footer = () => {
     </div>
 
     <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li className="ms-3"><Link className="text-white" to="#">Twitter</Link></li>
-      <li className="ms-3"><Link className="text-white" to="#">Facebook</Link></li>
-      <li className="ms-3"><Link className="text-white" to="#">other websites</Link></li>
+      {/* <li className="ms-3"><Link className="text-white" to="#">Twitter</Link></li> */}
+      <li className="me-5 bg-warning"><a href='https://www.facebook.com/people/StudyMaterials/100090873630770/' target="_blank" rel='noreferrer' className='text-dark fw-bold'>Facebook Page</a> </li>
+      <li className="me-5 bg-warning"><Link className="text-dark fw-bold" to="#">Contact Number:9820135187</Link></li>
     </ul>
   </footer>
 </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { registeration } from '../API/userAPI'
 
-import image_signup from '../images/image_signup.PNG'
+import image_signup from '../images/image_signup.png'
 
 import './SignUp.css'
 
@@ -10,6 +10,7 @@ const SignUp = () => {
 
   {/* now is the time to introduce the states for the registeration of the names, emails and other things */}
 
+  
   const [email,setEmail]= useState("")
   const [name,setName]= useState("")
   const [phone,setPhone]= useState("")
@@ -52,7 +53,9 @@ const submitHandler= (event)=>{
 
 const showSuccess = ()=>{
   if(success){
-    return <div className='alert alert-success'>{success}</div>
+
+    <div className='alert alert-success'>{success}</div>
+    return navigate('/signup-success')
   }
 }
 

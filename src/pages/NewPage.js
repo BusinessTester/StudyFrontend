@@ -45,9 +45,9 @@ let value = JSON.parse(data)
       <td className='text fw-bold h6'>{value.subject}</td>
 
         <td className='text fw-bold h6'>{value.id}</td>
-        <td className='text fw-bold h6'>A-</td>
+        <td className='text fw-bold h6'>{value.review}</td>
         {/* <td><Link to={value.preview}>preview link</Link>  </td> */}
-        <td><button className='button bg-warning fw-bold h6'><a className='text text-black' target='_blank' rel='noreferer' href={value.preview}>preview link</a></button>   </td>
+        <td><button className='button bg-warning fw-bold h6'><a className='text text-black' target='_blank' rel='noreferrer' href={value.preview}>preview link</a></button>   </td>
         <td className='text-dark fw-bold h6'>{value.contact}</td>
 
       </tr>
@@ -57,7 +57,15 @@ let value = JSON.parse(data)
       </div>
 
       <div className='display-newpage col col-md-10'>
-      {<iframe className='newpage-frame' src='https://drive.google.com/file/d/10ZF681DNd2Ql7D1j1dn2KHMdNDaJt-pw/preview' width="600" height="450"></iframe>}
+      {
+        
+        
+        // <iframe className='newpage-frame' src='https://drive.google.com/file/d/10ZF681DNd2Ql7D1j1dn2KHMdNDaJt-pw/preview' width="600" height="450"></iframe>
+      
+        <iframe className='newpage-frame' src={`${value.preview}`} width="600" height="450"></iframe>
+      
+      
+      }
     </div>
       </div>
     </div>

@@ -1,18 +1,24 @@
 .cardo{
     background-color: #800080b0;
+    background-color: #9e019eb0;
+
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     border-left: 3px solid whitesmoke;
+    height: 450px;
 
 
 }
+
 
 .cardo .card{
     background-color: #282D3C;
+    background-color: rgb(28, 69, 145);
+    height: 420px;
 }
 
 .cardo .card:hover{
-    background-color:#ffa31a ;
+    background-color:#40ff1a ;
     transform: scale(1.1);
     transition: 1.2s;
     
@@ -27,4 +33,43 @@ h6{
 .btn:hover{
     /* background-color: green; */
     background-color: #282D3C;
+}
+.card-body{
+    background-color: #1b221eb0;
+    /* margin: 3px; */
+    /* height: 200px; */
+    position: relative;
+}
+.btn-free{
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    margin-top: 20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+
+}
+.btn-purchase{
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    padding-top: 3%;
+
+    padding-bottom: 3%;
+
+
+}
+.btn-delete{
+    position: absolute;
+    bottom: 15px;
+    margin-left: 170px;
+    right: 0;
+}
+
+.btn-update-subject{
+    position: absolute;
+    right: 0;
+    bottom: 55px;
+    /* margin-top: 14px; */
 }

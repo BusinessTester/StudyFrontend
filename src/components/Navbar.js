@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, Navigate }from 'react-router-dom'
 import { isAuthenticated, logOut, myPurchases } from '../API/userAPI'
-import amazing from '../images/1.PNG'
+import amazing from '../images/1.png'
 import './Navbar.css'
 import qresewa from '../images/Snip2.PNG'
 
@@ -20,7 +20,7 @@ const [procure,setProcure] = useState('')
   // this is for fetching the data from the localstorage and using the information to welcome the user
 
   const userInfo = isAuthenticated()
-  console.log(userInfo)
+  // console.log(userInfo)
 
   
  
@@ -55,7 +55,7 @@ const [procure,setProcure] = useState('')
 
     }
   },[])
-  console.log(procure)
+  // console.log(procure)
 
 
 
@@ -78,7 +78,7 @@ const [procure,setProcure] = useState('')
           {/* <button className='btn btn-primary pill-rounded '> */}
 <Link className="navbar-mynotes nav-link active text-white position-relative" aria-current="page" to={`/purchases/${userInfo.user_info._id}`}>My Notes
           {
-            procure?<span className='navbar-badge-length badge badge-dark position-absolute top-0 bg-warning text-dark'> {procure.length}</span>:<span className='badge badge-dark position-absolute top-0'> 0 </span>  
+            procure?<span className='navbar-badge-length badge badge-dark position-absolute top-0 bg-warning text-dark'> {procure.length-1}</span>:<span className='badge badge-dark position-absolute top-0'> 0 </span>  
           }
           
           </Link>
@@ -105,11 +105,15 @@ const [procure,setProcure] = useState('')
       </ul>
 
 
-      <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+      {
+  userInfo.user_info.role===2&&<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
         <li className="nav-item text-white fw-bold">
        {/* Ph: 9849632777 / studymaterials@gmail.com */}
+       <Link to="/admin/subjectseditor" className='text-white'>subjecteditor</Link>
        
-        </li></ul>
+        </li>
+        </ul>
+}
      
 
       <ul className="navbar-nav mr-4">
@@ -137,10 +141,10 @@ userInfo?<ul className='navbar-nav '>
      {/* this is the commencement of the modal */}
 
      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                   <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                   <div className="modal-dialog modal-dialog-centered">
                        <div className="modal-content">
                            <div className="modal-header">
-                               <h5 className="modal-title text-dark fw-bold" id="exampleModalLabel">Call Us At 9849632777 to Complete This Payment Process</h5>
+                               <h5 className="modal-title text-dark fw-bold" id="exampleModalLabel">Call Us At 9820135187 to Complete This Payment Process</h5>
                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                            </div>
                            <div className="modal-body">

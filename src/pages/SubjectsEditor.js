@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 import { addSubject } from '../API/subjectAPI'
 import { isAuthenticated } from '../API/userAPI'
 import { subjectList } from './SubjectList'
@@ -9,7 +10,7 @@ const SubjectsEditor = () => {
 const user = isAuthenticated()
 const navigate = useNavigate()
 
-const dispatch  = useDispatch()
+// const dispatch  = useDispatch()
 
 
     useEffect(()=>{
@@ -17,7 +18,7 @@ const dispatch  = useDispatch()
                 navigate('/')
             }
     },[])
-    const [id,setId] = useState("")
+    const [subject_code,setSubjectCode] = useState("")
     const [subject,setSubject] = useState("")
     const [price,setPrice] = useState("")
 
@@ -48,7 +49,7 @@ const dispatch  = useDispatch()
   
 const submitHandler1 = (e)=>{
     e.preventDefault()
-    addSubject(id,subject,price,field,university,college,level,uploader,review,preview,contact)
+    addSubject(subject_code,subject,price,field,university,college,level,uploader,review,preview,contact)
     .then(data=>{
         if(!data){
             return console.log(data.error)
@@ -61,7 +62,7 @@ const submitHandler1 = (e)=>{
             navigate("/mainpageloader")
 
         }
-    })
+    }).catch(err=>console.log(err))
     // return dispatch({type:"ADDITION_SUBJECT", payload:subjecto})
 }
   
@@ -79,7 +80,7 @@ const submitHandler1 = (e)=>{
         <form className='form form-container'>
             this is for the addition of subjects form 
             <label>enter the id</label><br/>
-            <input className='form-control' type='text' value={id}  onChange={e=>setId(e.target.value)} /><br/>
+            <input className='form-control' type='text' value={subject_code}  onChange={e=>setSubjectCode(e.target.value)} /><br/>
 
             <label>enter the name of the subject</label><br/>
             <input className='form-control' type='text' value={subject} onChange={e=>setSubject(e.target.value)}/><br/>
@@ -130,7 +131,15 @@ const submitHandler1 = (e)=>{
             
             </div>
 
-            <div className='col col-md-6'>this is for the second form</div>
+            <div className='col col-md-6'>this is for the second form <br/>
+            
+            <Link to='/admin/allusers'>
+            
+             <button className='btn btn-success'>list all the users</button>
+            </Link>
+            {/* <button className='btn btn-success'></button> */}
+
+            </div>
         </div>
         
 

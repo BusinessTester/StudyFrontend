@@ -83,7 +83,7 @@ const store2 = useSelector(store=>store.SecondRed)
     
     
 
-console.log(procurement)
+// console.log(procurement)
 
 
 // this is the function to be used for the submission of the entire form and the whole information 
@@ -147,7 +147,7 @@ const sendEmail = (e) => {
     //     return <div className='alert alert-warning'>There was an error while submtting. Try again or contact the system admin</div> 
     // }
     let esewa = document.getElementById("payment_number").value 
-    if(esewa.length!=7||esewa==""){
+    if(esewa.length!==7||esewa===""){
         
         
         return   alert("please enter a valid esewa payment transaction code after making the payment")
@@ -283,7 +283,7 @@ document.getElementById("submission").disabled = true
                             {procurement.map((element,i)=>{
                                 return  <tr>
                                 <td>{element.subject}</td>
-                                <td>{element.id}</td>
+                                <td>{element.subject_code}</td>
                                 <td>{element.price}</td>
             
                             </tr>

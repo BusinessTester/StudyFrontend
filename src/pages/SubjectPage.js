@@ -23,7 +23,7 @@ const SubjectPage = ({props}) => {
         else{
           navigate('/mainpageloader')
 
-        return  console.log(data.message)
+        // return  console.log(data.message)
         }
         
       })
@@ -37,12 +37,12 @@ let dispatch  = useDispatch()
     <div className="cardo col">
     <div className="card m-3">
       {/* <img src="..." className="card-img-top" alt="..."/> */}
-      <div className="card-body">
+      <div className="card-body" style={{height:"370px"}}>
 
         {/* <button className='bg-primary' onClick={()=>setInfo(props.name)}>click me please</button> */}
         {/* <iframe></iframe> */}
        
-        <Link to='/newpage' onClick={()=>{
+        {/* <Link to='/newpage' onClick={()=>{
             localStorage.setItem('data',JSON.stringify(props))
           }}>
 
@@ -50,10 +50,13 @@ let dispatch  = useDispatch()
         <h6 className="card-title text-white mx-auto">PREVIEW: {props.preview}</h6>
 
 
-        </Link>
+        </Link> */}
+        <a href={`${props.preview}`} className="text-white ms-3 mb-3" target="_blank" rel="noreferrer">CLICK TO PREVIEW</a>
         <h5 className="card-title text-white mx-auto">SUBJECT: {props.subject}</h5>
 
         <h6 className="card-title text-white ">FIELD:{props.field}</h6>
+        <h6 className="card-title text-white ">SubjectCode:{props.subject_code}</h6>
+
         <h6 className="card-title text-white ">YEAR:{props.year}</h6>
         <h6 className="card-title text-white ">UNIVERSITY:{props.university}</h6>
         <h6 className="card-title text-white ">COLLEGE:{props.college}</h6>
@@ -62,9 +65,16 @@ let dispatch  = useDispatch()
         <h6 className="card-title text-white ">UPLOADER:{props.uploader}</h6>
 
         {/* <button className='btn btn-primary' onClick={()=>dispatch({type:"ADD_TO_CART", payload:props})}>add to cart</button> */}
+        {
+  user.user_info.role===2 &&<Link to={`/admin/updatesubject/${props._id}`}><button  className='btn-update-subject btn btn-success mb-2'>
+          Update This Subject
+          </button></Link> 
+
+}
+{/* position-absolute */}
         
         {
-          props.price===0?<button className='btn btn-warning'>This is free</button>: <button className='btn btn-primary' 
+          props.price===0?<button className='btn-free btn btn-warning '>This is free</button>: <button className='btn-purchase position-absolute btn btn-primary' 
         onClick={()=>{
          return dispatch({type:"ADD_TO_CART", payload:props})
 
@@ -75,7 +85,8 @@ let dispatch  = useDispatch()
         
 
 {
-  user.user_info.role===2 &&<button id='button1-subject-page' className='ms-2 btn btn-danger' 
+  // btn-delete
+  user.user_info.role===2 &&<button id='button1-subject-page' className='btn-delete ms-2  btn btn-danger' 
         onClick={()=>{
           setId(props._id)
          return deleteHandler()
@@ -99,6 +110,7 @@ let dispatch  = useDispatch()
   </div>
     </>
   )
+
 }
 
 export default SubjectPage

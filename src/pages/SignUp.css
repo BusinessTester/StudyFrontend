@@ -1,23 +1,28 @@
 .signup{
     height: 100vh;
+    background-image: url('../images/image_signup.png');
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 .form-signup{
-    height: 300px;
-    width: 700px;
+    height: 350px;
+    width: 900px;
     margin-top: 0px;
     /* margin-bottom: 20px; */
 
-    margin-left: 35%;
+    margin-left: 25%;
     /* background-color: blue; */
     font-family: 'Courier New', Courier, monospace;
     background-color:#581845
     ;
     opacity: 1;
+    position: absolute;
+    top: 100px;
     
 }
 

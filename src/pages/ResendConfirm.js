@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import { authenticate, signInUser } from '../API/userAPI'
+import { authenticate, resendingConfirmation, signInUser } from '../API/userAPI'
 import Footer from '../components/Footer'
 
-import image_signin from '../images/1_blur.png'
+import image_signin from '../images/image_signup.png'
 import './SignIn.css'
 
-const SignIn = () => {
+const ResendConfirm = () => {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
 
@@ -14,18 +14,14 @@ const SignIn = () => {
 
 
   // this is for the display of the success and error while signing up
-  const [success,setSuccess] = useState(false)
+  const [success,setSuccess] = useState("")
   const [error,setError] = useState("")
 
 
-  // for the display and hiding of the password
-  const [display,setDisplay] = useState(false)
-  let vision = 'password'
-
   const submitHandler = (event)=>{
     event.preventDefault()
-  
-    signInUser(email,password)
+
+    resendingConfirmation(email,password)
     .then(data=>{
       // console.log(data)
       if(data.error){
@@ -33,8 +29,8 @@ const SignIn = () => {
         
       }
       else{
-        setSuccess(true)
-        authenticate(data)
+        setSuccess(data.message)
+        // authenticate(data)
       }
     })
     .catch(error=>console.log(error))
@@ -44,7 +40,8 @@ const SignIn = () => {
 
   const showSuccess=()=>{
     if(success){
-      return <Navigate to='/mainpageloader'></Navigate> 
+    //    <Navigate to='/mainpageloader'></Navigate> 
+      return <div className='alert alert-success'>{success}</div>
     }
   }
 
@@ -58,27 +55,7 @@ const SignIn = () => {
 
 
 
-  // this is to show or hide the password 
-  // const showPassword = ()=>{
-  //   let displayer = document.getElementById("floatingPassword")
 
-  //   if(displayer.type==="password"){
-  //     return displayer.type = "text"
-  //   }
-  //   else{
-  //     return displayer.type="password"
-  //   }
-  // }
-// this method did not work, so i will try to utilize the state method to change the values 
-// const showPassword = (event)=>{
-//   event.preventDefault()
-//   setDisplay(true)
-//   vision="text"
-//   if(display=false){
-//     vision="password"
-//   }
-
-// }
 
 
   return (
@@ -86,10 +63,7 @@ const SignIn = () => {
     
      <div className='signin d-flex fw-bold text-dark' style={{backgroundImage:`url(${image_signin})`}}>
     
-    {/* username  */}
-    {/* email  */}
-    {/* password */}
-   {/* states are created for taking in email and password from the user */}
+ 
 
    {
     showSuccess()
@@ -100,7 +74,7 @@ const SignIn = () => {
   
     <form className='form-signin'> 
     {/* <img className="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/> */}
-    <h1 className="h3 mb-3 fw-normal text-white">Please sign In</h1>
+    <h3 className="fw-normal text-white">Enter Valid Details used for Signup</h3>
 
     {/* <div className="form-floating m-2">
       <input type="name" className="form-control" id="floatingName" placeholder="Name"/>
@@ -123,12 +97,16 @@ const SignIn = () => {
     </div> */}
 
    
-    <button className="button-signin w-30 btn btn-lg btn-primary" type="submit" onClick={submitHandler}>Sign In</button>
+    <button className=" w-30 btn btn-primary mt-2" type="submit" onClick={submitHandler}>Send Verification Link</button>
+
+
+    
     <p className="paragraph-signin text-white"> Don't have an account? <Link to='/signup'>
       <button className='btn btn-primary'>Sign Up</button>
       </Link> </p>
 
-      <Link to='/signin-forgotpassword' className='signin-forgot text-white m-2 mb-2 p-2'>Forgot Password? Reset the Password</Link>
+<span><p className="paragraph-signin text-white">Have an Account? <Link to='/signin' className='signin-forgot text-white'><button className='btn btn-primary mb-2'>Signin</button> </Link>  </p>  </span>
+    
 
 
   </form>
@@ -148,4 +126,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default ResendConfirm
