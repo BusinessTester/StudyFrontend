@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, Navigate }from 'react-router-dom'
 import { isAuthenticated, logOut, myPurchases } from '../API/userAPI'
-import amazing from '../images/1.png'
+import amazing from '../images/1.PNG'
 import './Navbar.css'
 import qresewa from '../images/Snip2.PNG'
 
