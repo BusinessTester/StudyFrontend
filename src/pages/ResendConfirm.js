@@ -3,7 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import { authenticate, resendingConfirmation, signInUser } from '../API/userAPI'
 import Footer from '../components/Footer'
 
-import image_signin from '../images/image_signup.png'
+import image_signin from '../images/image_signup.PNG'
 import './SignIn.css'
 
 const ResendConfirm = () => {
