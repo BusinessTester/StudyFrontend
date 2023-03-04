@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { registeration } from '../API/userAPI'
 
-import image_signup from '../images/image_signup.png'
+import image_signup from '../images/image_signup.PNG'
 
 import './SignUp.css'
 
