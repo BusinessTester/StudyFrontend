@@ -85,6 +85,12 @@ const submitHandler = (event)=>{
     //   setArrange('')
     //  }  
    
+    
+     const submitTU=(event)=>{
+      event.preventDefault()
+      setArrange(subject_list.filter(element=>element.university.toLowerCase().match("tu")))
+
+    }
   
   
     return (
@@ -126,7 +132,7 @@ const submitHandler = (event)=>{
 
 </span>
 <span><button className='btn btn-success me-3 mt-2'>University Wise:</button>
-<button className="btn btn-primary ms-2">TU</button> <button className="btn btn-primary">PU</button>
+<button className="btn btn-primary ms-2" onClick={submitTU}>TU</button> <button className="btn btn-primary">PU</button>
 
 
 </span>
