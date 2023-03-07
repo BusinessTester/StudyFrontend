@@ -120,7 +120,7 @@ let funky1 = ()=>{
         ${procurement.map((element,i)=>{
             return  `<tr>
             <td style="border:3px solid rgb(0, 0, 0)"><h5>${element.subject}</h5></td>
-            <td style="border:3px solid rgb(0, 0, 0)"><h5>${element.id}</h5></td>
+            <td style="border:3px solid rgb(0, 0, 0)"><h5>${element.subject_code}</h5></td>
             <td style="border:3px solid rgb(0, 0, 0)"><h5>${element.price}</h5></td>
 
         </tr>`
