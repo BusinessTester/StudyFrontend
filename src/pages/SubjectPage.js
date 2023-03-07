@@ -57,7 +57,7 @@ let dispatch  = useDispatch()
         <h6 className="card-title text-white ">FIELD:{props.field}</h6>
         <h6 className="card-title text-white ">SubjectCode:{props.subject_code}</h6>
 
-        <h6 className="card-title text-white ">YEAR:{props.year}</h6>
+        <h6 className="card-title text-white ">REVIEW:{props.review}</h6>
         <h6 className="card-title text-white ">UNIVERSITY:{props.university}</h6>
         <h6 className="card-title text-white ">COLLEGE:{props.college}</h6>
         <h6 className="card-title text-white ">PRICE:NRS {props.price}</h6>
