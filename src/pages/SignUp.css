@@ -54,7 +54,7 @@
 }
 
 
-@media (max-width:768px){
+@media (max-width:768px) and (min-width:300px){
 
 
     .signup{
@@ -98,7 +98,107 @@
     .h3{
     
         margin-left: 0%;
-     font-size: large;}
+    font-size: large;}
+    
+    
+    
+}
+
+@media (max-width:1100px) and (min-width:769px){
+
+
+    .signup{
+        height: 100vh;
+        background-image: url('../images/image_signup.png');
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        scroll-behavior: auto;
+    }
+
+    .signup-button{
+        margin-left: 25%;
+        background-color: rgb(83, 83, 228);
+        width: 20%;
+        padding: 10px;
+        border-radius: 30px 30px 30px;
+    }
+
+    .form-signup{
+        height: 350px;
+        width: 650px;
+        margin-top: 150px;
+        /* margin-bottom: 20px; */
+    
+        margin-left: 10%;
+        /* background-color: blue; */
+        font-family: 'Courier New', Courier, monospace;
+        background-color:#581845
+        ;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        
+    }
+
+    
+    .h3{
+    
+        margin-left: 0%;
+    font-size: large;}
+    
+    
+    
+}
+
+@media (max-width:1205px) and (min-width:1101px){
+
+
+    .signup{
+        height: 100vh;
+        background-image: url('../images/image_signup.png');
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        scroll-behavior: auto;
+    }
+
+    .signup-button{
+        margin-left: 35%;
+        background-color: rgb(83, 83, 228);
+        width: 25%;
+        padding: 10px;
+        border-radius: 30px 30px 30px;
+    }
+
+    .form-signup{
+        height: 350px;
+        width: 900px;
+        margin-top: 150px;
+        /* margin-bottom: 20px; */
+    
+        margin-left: 10%;
+        /* background-color: blue; */
+        font-family: 'Courier New', Courier, monospace;
+        background-color:#581845
+        ;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        
+    }
+
+    
+    .h3{
+    
+        margin-left: 0%;
+    font-size: large;}
     
     
     
