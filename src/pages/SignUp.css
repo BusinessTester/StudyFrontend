@@ -52,3 +52,53 @@
     border-radius: 30px 30px 30px;
 
 }
+
+
+@media (max-width:600px){
+
+
+    .signup{
+        height: 100vh;
+        background-image: url('../images/image_signup.png');
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        scroll-behavior: auto;
+    }
+
+    .signup-button{
+        margin-left: 2%;
+        background-color: rgb(83, 83, 228);
+        width: 20%;
+        padding: 10px;
+        border-radius: 30px 30px 30px;
+    }
+
+    .form-signup{
+        height: 550px;
+        width: 500px;
+        margin-top: 0px;
+        /* margin-bottom: 20px; */
+    
+        margin-left: 2%;
+        /* background-color: blue; */
+        font-family: 'Courier New', Courier, monospace;
+        background-color:#581845
+        ;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        
+    }
+
+    
+    .h3{
+    
+        margin-left: 0%;}
+    
+    
+    
+}
