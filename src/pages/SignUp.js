@@ -87,10 +87,10 @@ const showError = ()=>{
 
     {/* i have decided to make use of the grid property to split the signup page into 2 halves atleast */}
     <div className='row'>
-    <div className='col col-md-1'>
+    <div className='col col-sm-0 col-md-1'>
 
     </div>
-    <div className='col col-md-5'>
+    <div className='col col-12 col-md-5'>
       <div className="form-floating m-2">
       <input type="name" className="form-control" id="floatingName" placeholder="Full Name*" 
       onChange={e=>setName(e.target.value)}/>
@@ -114,7 +114,7 @@ const showError = ()=>{
 
     
     </div>
-    <div className='col col-md-5'>
+    <div className='col  col-12 col-md-5'>
 
 
     <div className="form-floating m-2">
