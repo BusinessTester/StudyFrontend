@@ -53,7 +53,7 @@ const navigate = useNavigate()
 
   const showSuccess=()=>{
     if(success){
-       <div className='alert alert-success w-25'>{success}</div>
+       <div className='alert alert-success'>{success}</div>
          return navigate("/signin")
             
     }
@@ -63,7 +63,7 @@ const navigate = useNavigate()
   
   const showError=()=>{
     if(error){
-      return <div className='alert alert-danger w-25'>{error}</div>
+      return <div className='alert alert-danger'>{error}</div>
     }
   }
 
