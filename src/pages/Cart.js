@@ -102,14 +102,16 @@ const Cart = () => {
     {
 
 
-store.length>0? 
+store.length>0? <div> 
+<button className='btn-clearall btn btn-secondary mx-5' onClick={()=>{return dispatch({type:"DELETE_ALL"})}}>clear all</button>
 <table className=' cart-table table table-striped table-bordered'>
 <thead className='table-warning'>
     <tr>
         <td className='fw-bold text-dark'>Items</td>
         <td className='fw-bold text-dark'>Description</td>
         <td className='fw-bold text-dark'>Level</td>
-        <td className='fw-bold text-dark'>Uploader</td>
+
+        <td className='table-uploader fw-bold text-dark'>Uploader</td>
         <td className='fw-bold text-dark'>Price</td>
 
         <td className='fw-bold text-dark'>Remove</td>
@@ -121,7 +123,7 @@ store.length>0?
             <td className='fw-bold text-dark'>{user.subject}</td>
             <td className='fw-bold text-dark'>{user.university}</td>
             <td className='fw-bold text-dark'>{user.level}</td>
-            <td className='fw-bold text-dark'>{user.uploader}</td>
+            <td className='table-uploader fw-bold text-dark'>{user.uploader}</td>
             <td className='fw-bold text-dark'>Nrs. {user.price}</td>
 
 
@@ -148,7 +150,7 @@ store.length>0?
 </tbody>
 
 
-</table>:<div className='cart-icon row '>
+</table></div>:<div className='cart-icon row '>
     <div className='col col-md-4'>
     </div>
     <div className='col col-md-7'>
@@ -172,7 +174,7 @@ store.length>0?
         </div>
         <div className='col col-md-6'>
 
-    <button className='btn btn-secondary mx-5' onClick={()=>{return dispatch({type:"DELETE_ALL"})}}>clear all</button>
+//     <button className='btn btn-secondary mx-5' onClick={()=>{return dispatch({type:"DELETE_ALL"})}}>clear all</button>
 
 
         </div>
