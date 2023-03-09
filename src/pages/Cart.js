@@ -174,7 +174,7 @@ store.length>0? <div>
         </div>
         <div className='col col-md-6'>
 
-//     <button className='btn btn-secondary mx-5' onClick={()=>{return dispatch({type:"DELETE_ALL"})}}>clear all</button>
+
 
 
         </div>
