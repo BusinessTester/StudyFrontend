@@ -91,7 +91,13 @@ const submitHandler = (event)=>{
       setArrange(subject_list.filter(element=>element.university.toLowerCase().match("tu")))
 
     }
-  
+    const submitMBA = (event)=>{
+      event.preventDefault()
+
+// console.log(valuator)
+      setArrange(subject_list.filter(element=>element.field.toLowerCase().match("mba")))
+
+    }
   
     return (
       <>
@@ -126,6 +132,7 @@ const submitHandler = (event)=>{
 
 </span>
 <span><button className='btn btn-success me-3'>Fields Wise:</button><button className="btn btn-primary"  onClick={submitEngineering}>Engineering</button><button onClick={submitComputer} className="btn btn-primary m-1">Computer</button>
+<button onClick={submitMBA} className="btn btn-primary m-1">MBA</button>
    
 
 
