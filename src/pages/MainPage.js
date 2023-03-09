@@ -37,7 +37,7 @@ const [valuator,setValuator] = useState("")
    
     useEffect(()=>{
 
-      if(!subject_list){
+      if(!subject_list|| !user_presence){
         return navigate("/signin")
       }
 
@@ -102,7 +102,7 @@ const submitHandler = (event)=>{
     return (
       <>
       {
-        user_presence||subject_list?<div>
+        user_presence && subject_list?<div>
 
 <Navbar/>
 
