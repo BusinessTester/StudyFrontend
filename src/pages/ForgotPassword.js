@@ -39,7 +39,7 @@ const ForgotPassword = () => {
 
   const showSuccess=()=>{
     if(success){
-      return <div className='alert alert-success w-25'>{success}</div>
+      return <div className='alert alert-success'>{success}</div>
       
     }
   }
@@ -48,7 +48,7 @@ const ForgotPassword = () => {
   
   const showError=()=>{
     if(error){
-      return <div className='alert alert-danger w-25'>{error}</div>
+      return <div className='alert alert-danger'>{error}</div>
     }
   }
 
