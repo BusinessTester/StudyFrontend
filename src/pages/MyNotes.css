@@ -16,3 +16,21 @@
 
 
 }
+
+
+@media (max-width:656px){
+    .mynotes-table{
+        width: 80%;
+        margin-left: 12px;
+    }
+    
+
+    .mynotes-text{
+        margin: 50px;
+    
+        margin-left: 18px;
+    
+    
+    
+    }
+}
