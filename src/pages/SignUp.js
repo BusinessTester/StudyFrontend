@@ -136,9 +136,9 @@ const showError = ()=>{
 
     </div>
     {/* <div className='col col-md-1 fw-bold text-white'>*Required Fields</div> */}
-<button className="signup-button btn-large btn-primary" type="submit" onClick={submitHandler}>Sign Up</button>
+<button className="signup-button btn-large btn-primary text-white" type="submit" onClick={submitHandler}>Sign Up</button>
     <p className="paragraph-signup text-white">Already have an account. <Link to='/signin'>
-      <button className=''>Sign In</button></Link> 
+      <button className='text-white'>Sign In</button></Link> 
       </p>
       
    </div>
