@@ -65,6 +65,18 @@ const showError = ()=>{
    return <div className='alert alert-danger'>{error}</div>
   }
 }
+
+const passHandler = (e)=>{
+  e.preventDefault()
+  const z = document.getElementById("floatingPassword")
+  
+  if(z.type==="password"){
+    z.type = "text"
+  }
+  else{
+    z.type = "password"
+  }
+  }
   return (
     <div className='signup' style={{'backgroundImage':`url(${image_signup})`}}>
     
@@ -131,6 +143,8 @@ const showError = ()=>{
     <div className="form-floating m-2">
       <input type="password" className="form-control" id="floatingPassword" placeholder="Password*" onChange={e=>setPassword(e.target.value)}/>
       <label for="floatingPassword">Password*</label>
+            <button className='btn btn-success' onClick={passHandler}>Show Password</button>
+
     </div>
 
 
