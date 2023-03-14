@@ -79,6 +79,18 @@ const SignIn = () => {
 //   }
 
 // }
+  
+  const passHandler = (e)=>{
+e.preventDefault()
+const z = document.getElementById("floatingPassword")
+
+if(z.type==="password"){
+  z.type = "text"
+}
+else{
+  z.type = "password"
+}
+}
 
 
   return (
@@ -114,6 +126,8 @@ const SignIn = () => {
     <div className="form-floating m-2">
       <input type="password" className="form-control text-dark fw-bold" id="floatingPassword" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
       <label for="floatingPassword" className='text-dark fw-bold'>Password</label>
+      <button className='btn btn-success' onClick={passHandler}>Show Password</button>
+
     </div>
 {/* <input type='checkbox' onclick={}/>Show Password */}
     {/* <div className="checkbox mb-3">
