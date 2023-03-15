@@ -95,7 +95,11 @@ else{
 
   return (
     <>
-    
+      {
+    showSuccess()
+   }
+
+   {showError()}
      <div className='signin d-flex fw-bold text-dark' style={{backgroundImage:`url(${image_signin})`}}>
     
     {/* username  */}
@@ -103,11 +107,7 @@ else{
     {/* password */}
    {/* states are created for taking in email and password from the user */}
 
-   {
-    showSuccess()
-   }
-
-   {showError()}
+ 
 
   
     <form className='form-signin'> 
