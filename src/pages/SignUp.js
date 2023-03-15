@@ -143,8 +143,7 @@ const passHandler = (e)=>{
     <div className="form-floating m-2">
       <input type="password" className="form-control" id="floatingPassword" placeholder="Password*" onChange={e=>setPassword(e.target.value)}/>
       <label for="floatingPassword">Password*</label>
-            <button className='btn btn-success' onClick={passHandler}>Show Password</button>
-
+<h6 className='text-white'><input className='bg-dark' type="checkbox" aria-label="Checkbox for following text input" onClick={passHandler} /> Show Password</h6> 
     </div>
 
 
