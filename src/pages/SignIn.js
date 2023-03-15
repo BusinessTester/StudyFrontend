@@ -94,13 +94,13 @@ else{
 
 
   return (
-    <>
+    <div className='signin' style={{backgroundImage:`url(${image_signin})`}}>
       {
     showSuccess()
    }
 
    {showError()}
-     <div className='signin d-flex fw-bold text-dark' style={{backgroundImage:`url(${image_signin})`}}>
+     <div className='d-flex fw-bold text-dark'>
     
     {/* username  */}
     {/* email  */}
@@ -126,9 +126,9 @@ else{
     <div className="form-floating m-2">
       <input type="password" className="form-control text-dark fw-bold" id="floatingPassword" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
       <label for="floatingPassword" className='text-dark fw-bold'>Password</label>
-      <button className='btn btn-success' onClick={passHandler}>Show Password</button>
-
-    </div>
+      
+      <h6 className='text-white'><input className='bg-dark' type="checkbox" aria-label="Checkbox for following text input" onClick={passHandler} /> Show Password</h6>
+          </div>
 {/* <input type='checkbox' onclick={}/>Show Password */}
     {/* <div className="checkbox mb-3">
       <label>
@@ -139,10 +139,10 @@ else{
    
     <button className="button-signin w-30 btn btn-lg btn-primary" type="submit" onClick={submitHandler}>Sign In</button>
     <p className="paragraph-signin text-white"> Don't have an account? <Link to='/signup'>
-      <button className='btn btn-primary'>Sign Up</button>
+      <button className='btn btn-primary'>Create Account</button>
       </Link> </p>
 
-      <Link to='/signin-forgotpassword' className='signin-forgot text-white m-2 mb-2 p-2'>Forgot Password? Reset the Password</Link>
+      <Link to='/signin-forgotpassword' className='signin-forgot fw-bold text-white m-1 mb-2 p-2'><h5>Forgot Password? Reset the Password</h5></Link>
 
 
   </form>
@@ -157,7 +157,7 @@ else{
 
 </div>
 <Footer/>
-    </>
+    </div>
    
   )
 }
