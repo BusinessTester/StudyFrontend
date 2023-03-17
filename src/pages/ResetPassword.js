@@ -70,7 +70,7 @@ const navigate = useNavigate()
 
   const passHandler = (e)=>{
     e.preventDefault()
-    const z = document.getElementById("floatingPassword")
+    const z = document.getElementById("floatingInput")
     
     if(z.type==="password"){
       z.type = "text"
