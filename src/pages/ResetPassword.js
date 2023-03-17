@@ -68,7 +68,17 @@ const navigate = useNavigate()
   }
 
 
-
+  const passHandler = (e)=>{
+    e.preventDefault()
+    const z = document.getElementById("floatingPassword")
+    
+    if(z.type==="password"){
+      z.type = "text"
+    }
+    else{
+      z.type = "password"
+    }
+    }
   
 
 
@@ -92,6 +102,7 @@ const navigate = useNavigate()
     <div className="form-floating m-2 ">
       <input type="password" className="form-control text-dark fw-bold" id="floatingInput" placeholder="name@example.com" onChange={(e)=>setPassword(e.target.value)}/>
       <label for="floatingInput" className='text-dark fw-bold'>New Password</label>
+<h6 className='text-white'><input className='bg-dark' type="checkbox" aria-label="Checkbox for following text input" onClick={passHandler} /> Show Password</h6> 
     </div>
     {/* <div className="form-floating m-2">
       <input type="password" className="form-control text-dark fw-bold" id="floatingPassword" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
