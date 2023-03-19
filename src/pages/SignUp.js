@@ -85,7 +85,7 @@ const passHandler = (e)=>{
     {/* password */}
 
     {showSuccess()}
-    {showError()}
+    
    
 
    
@@ -94,7 +94,7 @@ const passHandler = (e)=>{
     
     <form className='form-signup fw-bold text-dark'>
     {/* <img className="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/> */}
-    <h1 className="h3 mb-2 fw-bold text-white">Please sign up (*Required Fields)</h1>
+    <h1 className="h3 fw-bold text-white">Please sign up (*Required Fields) {showError()}</h1>
 
 
     {/* i have decided to make use of the grid property to split the signup page into 2 halves atleast */}
@@ -103,20 +103,20 @@ const passHandler = (e)=>{
 
     </div>
     <div className='col col-12 col-md-5'>
-      <div className="form-floating m-2">
+      <div className="form-floating m-1">
       <input type="name" className="form-control" id="floatingName" placeholder="Full Name*" 
       onChange={e=>setName(e.target.value)}/>
       <label for="floatingName">Full Name*</label>
       </div>
 
 
-      <div className="form-floating m-2">
+      <div className="form-floating m-1">
       <input type="name" className="form-control" id="floatingName" placeholder="UserName*" onChange={e=>setUserName(e.target.value)}/>
       <label for="floatingName">UserName*</label>
       </div>
 
 
-      <div className="form-floating m-2">
+      <div className="form-floating m-1">
       <input type="Number" className="form-control" id="floatingName" placeholder="Age*" 
       onChange={e=>setAge(e.target.value)}/>
       <label for="floatingName">Age*</label>
@@ -129,7 +129,7 @@ const passHandler = (e)=>{
     <div className='col  col-12 col-md-5'>
 
 
-    <div className="form-floating m-2">
+    <div className="form-floating m-1">
       <input type="tel" className="form-control" id="floatingName" placeholder="Phone*" 
       onChange={e=>setPhone(e.target.value)}/>
       <label for="floatingName">Phone*</label>
@@ -140,7 +140,7 @@ const passHandler = (e)=>{
     </div>
 
 
-    <div className="form-floating m-2">
+    <div className="form-floating m-1">
       <input type="password" className="form-control" id="floatingPassword" placeholder="Password*" onChange={e=>setPassword(e.target.value)}/>
       <label for="floatingPassword">Password*</label>
 <h6 className='text-white'><input className='bg-dark' type="checkbox" aria-label="Checkbox for following text input" onClick={passHandler} /> Show Password</h6> 
