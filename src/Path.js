@@ -75,7 +75,7 @@ const Path = () => {
 
 
 
-            <Route path="/app" element={<App/>}/>
+              {/*<Route path="/app" element={<App/>}/>    */}         
 
         </Routes>
         {/* <Footer/> */}
